@@ -6,6 +6,28 @@
     box-sizing: border-box;
 }
 
+
+button {
+    padding: 15px;
+    display: inline-block;
+    background-size: 160px;
+    background-color: rgb(123,104,238);
+    backface-visibility: hidden;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-family: 'Dosis', sans-serif;
+    margin: 12px 0 0;
+    border: 3px solid #fff;
+
+}
+
+button:hover {
+    color: #3ec5ee;
+}
+
 html {
     scroll-behavior: smooth;
 }
