@@ -45,6 +45,7 @@ body {
     padding: 0;
 }
 
+
 nav {
     display: flex;
     font-size: 18px;
@@ -55,17 +56,17 @@ nav {
     justify-content:space-between;
 }
 
+nav div {
+    padding: 22px;
+    height: 100%;
+}
+
 nav a {
     display: block;
     text-align: center;
     height: 100%;
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
-
-nav div {
-    padding: 22px;
-    height: 100%;
 }
 
 a {
@@ -189,8 +190,18 @@ footer {
 
 /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .topnav a {
-        float: none;
-        width: 100%;
+    nav {
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+
+    nav div {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-right: 10px; /* Add some spacing between items */
     }
 }
