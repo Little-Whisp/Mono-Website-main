@@ -9,28 +9,27 @@
 .video-container {
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     align-items: center;
 }
 
 button {
     padding: 15px;
     display: inline-block;
-    background-size: 160px;
-    background-color: rgb(123,104,238);
+    background-color: rgb(114, 12, 224);
     backface-visibility: hidden;
-    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 0 inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
     box-sizing: border-box;
     height: 50px;
     cursor: pointer;
-    border-radius: 100px;
-    font-family: 'Dosis', sans-serif;
+    border-radius: 10px;
+    font-family: "Roboto Condensed", cursive;
     margin: 12px 0 0;
-    border: 3px solid #fff;
-
 }
 
+
 button:hover {
-    color: #3ec5ee;
+    background-color: #0b0b1c;
 }
 
 html {
@@ -38,19 +37,22 @@ html {
 }
 
 body {
-    background-color: rgb(25,25,112);
     font-size: 18px;
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("https://media.discordapp.net/attachments/372804664053334016/1185752368726429817/sdasdasdadasdads.png?ex=6590c0f2&is=657e4bf2&hm=0c13c2ed6b3f983fabe2e9779e0b808be01476df4206486d136e1a14b92b4cf6&=&format=webp&quality=lossless&width=1204&height=924");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff; /* Light text color */
 }
 
 
 nav {
     display: flex;
     font-size: 18px;
-    font-family: Roboto Condensed;
-    background-color: rgb(123,104,238);
+    background-color: #0b0b1c;
     position: fixed;
     width:100vw;
     justify-content:space-between;
@@ -115,40 +117,35 @@ header {
     color: white;
     text-align: center;
     height: 30vh;
-    background-image: url(https://cdn.discordapp.com/attachments/372804664053334016/953607843087540244/Untitled-1-Recovered.png);
+    /*background-image: url(https://cdn.discordapp.com/attachments/372804664053334016/953607843087540244/Untitled-1-Recovered.png);*/
     background-size: cover;
     background-position: center;
 }
 
+/* ... (previous styles) ... */
+
 section div {
-    background-color: rgb(123,104,238);
+    background-color: #0b0b1c;
     margin: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
     color: rgb(255, 255, 255);
     width: 90%;
+    font-size: 0.9em; /* Adjusted font size */
 }
 
 img {
     width: 85%;
     margin: auto;
     display: flex;
-    float: middle;
-}
-
-.imagecontainer {
-    padding: 0;
-}
-
-#firstword {
-    color: white;
-    font-weight: bolder;
+    border-radius: 10px;
 }
 
 section {
-    background-color: rgb(123,104,238);
+    background-color: #0b0b1c;
     margin: 20px auto;
-    font-size: 1.1em;
+    font-size: 1em; /* Adjusted font size */
+    border-radius: 10px;
     max-width: 800px;
 }
 
@@ -159,13 +156,14 @@ figcaption {
     opacity: 0.7;
 }
 
+/* ... (remaining styles) ... */
+
+
 footer {
-    background-color: rgb(123,104,238);
+    background-color: #0b0b1c;
     height: 8vh;
     display: flex;
-    float: middle;
     margin: auto;
-    display: flex;
     flex-direction: column;
     text-align: center;
     color: rgb(255, 255, 255);
