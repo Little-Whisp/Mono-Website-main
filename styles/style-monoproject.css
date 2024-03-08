@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 
 * {
     box-sizing: border-box;
@@ -9,27 +11,47 @@
 .video-container {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     align-items: center;
+    border-radius: 5px;
 }
 
-button {
-    padding: 15px;
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
     display: inline-block;
-    background-color: rgb(114, 12, 224);
-    backface-visibility: hidden;
-    box-shadow: rgba(50, 50, 93, .1) 0 0 0 0 inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
-    box-sizing: border-box;
-    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(9, 6, 27);
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 10px;
-    font-family: "Roboto Condensed", cursive;
-    margin: 12px 0 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.button:hover {
+    background-color: #4562a0;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
 
-button:hover {
-    background-color: #0b0b1c;
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+    /* Remove shadow on active state */
 }
 
 html {
@@ -37,25 +59,22 @@ html {
 }
 
 body {
+    background: linear-gradient(50deg, #000d4f, #280935);
     font-size: 18px;
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("https://media.discordapp.net/attachments/372804664053334016/1185752368726429817/sdasdasdadasdads.png?ex=6590c0f2&is=657e4bf2&hm=0c13c2ed6b3f983fabe2e9779e0b808be01476df4206486d136e1a14b92b4cf6&=&format=webp&quality=lossless&width=1204&height=924");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff; /* Light text color */
 }
 
 
 nav {
     display: flex;
-    font-size: 18px;
-    background-color: #0b0b1c;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    background-color: rgb(9, 6, 27);
     position: fixed;
-    width:100vw;
-    justify-content:space-between;
+    width: 100vw;
+    justify-content: space-between;
 }
 
 nav div {
@@ -84,10 +103,9 @@ a:hover {
 h1,
 h2 {
     margin-top: 4px;
-    font-family: "Acme", sans-serif;
-    font-weight: normal;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
 }
-
 
 
 .imagegallery {
@@ -111,41 +129,59 @@ h2 {
 }
 
 header {
-    font-family: "Roboto Condensed", cursive;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
     font-size: 3em;
     padding-top: 14vh;
     color: white;
     text-align: center;
     height: 30vh;
-    /*background-image: url(https://cdn.discordapp.com/attachments/372804664053334016/953607843087540244/Untitled-1-Recovered.png);*/
-    background-size: cover;
+    background-image: url(https://cdn.discordapp.com/attachments/372804664053334016/1209504787482153080/Schermafbeelding_2024-02-20_om_14.56.54.png?ex=65e72a1c&is=65d4b51c&hm=38ba1901e0d37c1d33c2cb2688d5885787c6d1cd02c5e89324dd7acbe24a176d&);
+    background-size: contain;
     background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Adjust the last value (0.3) to change opacity */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
 }
 
-/* ... (previous styles) ... */
 
-section div {
-    background-color: #0b0b1c;
+ div {
+    /* background-color: rgb(37, 26, 96); */
     margin: auto;
     padding-top: 3vh;
     padding-bottom: 3vh;
     color: rgb(255, 255, 255);
     width: 90%;
-    font-size: 0.9em; /* Adjusted font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+
 }
 
 img {
     width: 85%;
     margin: auto;
     display: flex;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    float: middle;
+}
+
+.imagecontainer {
+    padding: 0;
+}
+
+#firstword {
+    color: white;
+    font-weight: bolder;
 }
 
 section {
-    background-color: #0b0b1c;
+    background-color: rgb(37, 26, 96);
+    border-radius: 20px;
     margin: 20px auto;
-    font-size: 1em; /* Adjusted font size */
-    border-radius: 10px;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+    text-align: center;
     max-width: 800px;
 }
 
@@ -153,20 +189,21 @@ figcaption {
     font-size: 0.7em;
     font-style: italic;
     color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
     opacity: 0.7;
 }
 
-/* ... (remaining styles) ... */
-
-
 footer {
-    background-color: #0b0b1c;
+    background-color: rgb(37, 26, 96);
     height: 8vh;
     display: flex;
+    float: middle;
     margin: auto;
+    display: flex;
     flex-direction: column;
     text-align: center;
     color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
     justify-content: center;
 }
 
