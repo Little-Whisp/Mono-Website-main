@@ -23,6 +23,13 @@
     gap: 10px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -53,6 +60,52 @@
     box-shadow: none;
     /* Remove shadow on active state */
 }
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom of the page */
+    left: 20px; /* Adjust the distance from the right side as needed */
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the right distance as needed */
+    width: 120px; /* Adjust the width of the button */
+    height: 120px; /* Adjust the height of the button */
+    font-size: 16px; 
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(65, 35, 155);
+    border: none;
+    border-radius: 50%; /* Make it round (circle) */
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+
+#scrollToTopBtn img {
+    width: 60px; /* Adjust the width of the image */
+    height: 50px; /* Adjust the height of the image */
+    /* margin-right: 5px; Add margin between image and text */
+    box-shadow: none; /* Remove drop shadow from the image */
+}
+
+#scrollToTopBtn span {
+    font-size: 14px; /* Adjust font size of the text */
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(42, 185, 224, 0.8); /* Darken on hover */
+}
+
+svg {
+    transform: rotate(180deg);
+}
+
+  
 
 html {
     scroll-behavior: smooth;
@@ -136,14 +189,13 @@ header {
     color: white;
     text-align: center;
     height: 30vh;
-    background-image: url(https://cdn.discordapp.com/attachments/372804664053334016/1209504787482153080/Schermafbeelding_2024-02-20_om_14.56.54.png?ex=65f99f1c&is=65e72a1c&hm=01ca5cbf98b3a7716df4d28f7a7f132eae7793cfe042ba30fb22bbaf2bdc3db0&);
-    background-size: contain;
+    background-image: url('../img/Untitled-1-Recovered.png');
+    background-size: cover; 
     background-position: center;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Adjust the last value (0.3) to change opacity */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
 }
+
 
 
  div {
@@ -226,17 +278,37 @@ footer {
 /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     nav {
-        flex-direction: row; /* Keep items in a row */
-        align-items: center; /* Center items horizontally */
-        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
     }
 
     nav div {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     nav a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        margin-right: 10px; /* Add some spacing between items */
+        font-size: 8px;
+        margin-right: 10px;
+    }
+
+    #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #scrollToTopBtn img {
+        width: 40px;
+        height: 30px;
+    }
+
+    #scrollToTopBtn span {
+        font-size: 6px;
     }
 }

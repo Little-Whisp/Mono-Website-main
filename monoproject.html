@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/372804664053334016/953617269945163776/1.png?ex=6604044a&is=65f18f4a&hm=2280a31c87ececfb4c6e2d92d821b4531408915264b70ae0ffe104fb7185bb33&" />
+    <link rel="icon" href="Img/1.png" />
     <title>Mono</title>
     <link rel="stylesheet" type="text/css" href="./styles/style-monoproject.css"/>
 
@@ -20,6 +20,13 @@
     <div><a href="#Mono in action">Mono in action</a></div>
 </nav>
 
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+    <div>
+      <img src="img/1.png" alt="Arrow icon">
+      <span>Back to top</span>
+    </div>
+  </button>
+
 <header>The creation of Mono</header>
 
 <main>
@@ -27,8 +34,7 @@
     <div class="button-container">
         <button class="button" onclick="window.location.href='index.html'">Go back</button>
     </div>
-
-
+    
     <section id="Concept of Mono">
 
         <div>
@@ -45,7 +51,7 @@
             were the shapes they had, mostly round and the material was smooth and shiny. The colour use was also super important. I liked that the robots were very
             colourful and had very soft colours as well. It really fitted their cute and cartoony designs.
         </p><p>
-            <img src="https://cdn.discordapp.com/attachments/372804664053334016/951088516744503346/unknown.png?ex=65fad134&is=65e85c34&hm=4b1e92693c9762f6ce6d43a33e4736adb102de18e3a30f69d72b760a3a6a2807&">
+            <img src="img/moodboardmono.png">
         </p><p>
             <figcaption>Photo 1: Moodboard Mono's design  </figcaption>
 
@@ -79,11 +85,11 @@
             I knew the moment I finished the sketch that I would have so much fun with bringing this robot to life. I named my robot Mono, after the word monoscopic meaning:
             'Something that has been obtained by imaging from a single viewpoint.'
 
-            <figure>
-                <img src="https://cdn.discordapp.com/attachments/372804664053334016/891961944897114162/Mono_Design.png?ex=660a6dcb&is=65f7f8cb&hm=32c06c2500e6ef33bae261027699db5703d58e479ab76324eb68117b7163c7cc&">
-                </p><p>
-                <figcaption>Photo 1: Sketching process of Mono</figcaption>
-            </figure>
+                <figure>
+                    <img src="img/Mono_Design.png">
+            </p><p>
+                    <figcaption>Photo 1: Sketching process of Mono</figcaption>
+                </figure>
 
             <body>
     </section>
@@ -125,17 +131,17 @@
             <div class="imagegallery">
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/891960201362673705/IMG_20210923_180512.jpg?ex=660a6c2b&is=65f7f72b&hm=24c388fe91b76e8bb73e93d904b2345d9515f0b207134bc202d3c67d43b35d41&">
+                    <img src="img/IMG_20210923_180512.jpg">
                     <figcaption>Photo 1: Inside Mono's body</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/891960256035434516/IMG_20210923_163143.jpg?ex=660a6c38&is=65f7f738&hm=7c8a77f75b1613bb24d025621d6d48dd434de498b9022006a6e28e5c25348f86&">
+                    <img src="img/IMG_20210923_163143.jpg">
                     <figcaption>Photo 2: Mono's wheels</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/891960187110445066/IMG_20210923_195324.jpg?ex=660a6c28&is=65f7f728&hm=ca775bace35df8218203237c5c112fef1110252f4970daee459ab74e0ba2230a&">
+                    <img src="img/IMG_20210923_195324.jpg">
                     <figcaption>Photo 3: Cables and components</figcaption>
                 </figure>
 
@@ -176,17 +182,17 @@
             <div class="imagegallery">
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/892497867988664350/1632858462493.webp?ex=65f9ebe9&is=65e776e9&hm=b08a34ea129f57318e498d402d0efc90954bbc93a51fe20e779166d05e4f7272&">
+                    <img src="img/monodaboy.png">
                     <figcaption>Photo 1: Mono</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/891959963310768148/IMG_20210924_200351_046.jpg?ex=660a6bf3&is=65f7f6f3&hm=8ff76aaf7ca2bbefa1fc220ad4c2176da8bf1fa4f8c4f3ba67c8ce7ab38426ed&">
+                    <img src="img/evilmono.png">
                     <figcaption>Photo 2: Mono 'the battle bot' </figcaption>
                 </figure>
 
                 <figure>
-                    <img src="https://cdn.discordapp.com/attachments/372804664053334016/953594187377422357/unknown.png?ex=65fab44b&is=65e83f4b&hm=810efeb38c8f9a43243bc10ae66e59351239f22e14fed2e698bbd57dff1878d7&">
+                    <img src="img/IMG_20210924_200351_046.jpg">
                     <figcaption>Photo 3: Mono's led eyes</figcaption>
                 </figure>
 
@@ -204,6 +210,31 @@
 
 <footer>
 </footer>
+
+<script>
+    // Get the button
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+
 </main>
 </body>
 </html>
