@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+
+* {
+    box-sizing: border-box;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 10px;
+    margin: auto; /* Center within the parent container */
+    height: 100vh; /* Take full viewport height to center vertically */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(9, 6, 27);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    background-color: #4562a0;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+    /* Remove shadow on active state */
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom of the page */
+    left: 20px; /* Adjust the distance from the right side as needed */
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the right distance as needed */
+    width: 120px; /* Adjust the width of the button */
+    height: 120px; /* Adjust the height of the button */
+    font-size: 16px; 
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(65, 35, 155);
+    border: none;
+    border-radius: 50%; /* Make it round (circle) */
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+
+#scrollToTopBtn img {
+    width: 60px; /* Adjust the width of the image */
+    height: 50px; /* Adjust the height of the image */
+    /* margin-right: 5px; Add margin between image and text */
+    box-shadow: none; /* Remove drop shadow from the image */
+}
+
+#scrollToTopBtn span {
+    font-size: 14px; /* Adjust font size of the text */
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(42, 185, 224, 0.8); /* Darken on hover */
+}
+
+svg {
+    transform: rotate(180deg);
+}
+
+  
+
+html, body {
+    height: 100%; /* Ensure the elements take up the full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(50deg, #000d4f, #280935); /* Ensure the background covers the entire viewport */
+}
+
+body {
+    font-size: 18px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+nav {
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    background-color: rgb(9, 6, 27);
+    position: fixed;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+nav div {
+    padding: 22px;
+    height: 100%;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00eaff;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    margin-top: 4px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+}
+
+
+.imagegallery {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagegallery figure {
+    display: block;
+    margin: 0;
+    width: 30%;
+}
+
+.imagegallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+header {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    padding-top: calc(14vh + 60px); /* Adjust padding to include nav height (e.g., 60px) */
+    color: white;
+    text-align: center;
+    height: 30vh; /* The height of the header is 30% of the viewport height */
+    background-image: url('../img/Banner.jpg'); /* Updated image file */
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+ div {
+    /* background-color: rgb(37, 26, 96); */
+    margin: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+
+}
+
+img {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    float: middle;
+}
+
+.imagecontainer {
+    padding: 0;
+}
+
+#firstword {
+    color: white;
+    font-weight: bolder;
+}
+
+section {
+    background-color: rgb(37, 26, 96);
+    border-radius: 20px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+    text-align: center;
+    max-width: 800px;
+}
+
+figcaption {
+    font-size: 0.7em;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+    opacity: 0.7;
+}
+
+footer {
+    background-color: rgb(37, 26, 96);
+    height: 8vh;
+    display: flex;
+    float: middle;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the values (offset-x, offset-y, blur-radius, color) as needed */
+    justify-content: center;
+}
+
+/* The navbar container */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    nav div {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+        margin-right: 10px;
+    }
+
+    #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #scrollToTopBtn img {
+        width: 30px;
+        height: 20px;
+    }
+
+    #scrollToTopBtn span {
+        font-size: 6px;
+    }
+}

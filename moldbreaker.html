@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/1.png" />
+    <title>Silviani Martis</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style-moldbreaker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div><a href="#Introduction">Introduction</a></div>
+        <div><a href="#My-Role">My Role</a></div>
+        <div><a href="#Art">The Art of Moldbreaker</a></div>
+    </nav>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <div>
+            <img src="img/1.png" alt="Arrow icon">
+            <span>Back to top</span>
+        </div>
+    </button>
+
+    <header></header>
+
+    <main>
+        <div class="button-container">
+            <button class="button" onclick="window.location.href='games.html'">Go back</button>
+        </div>
+
+        <section id="Introduction">
+            <div>
+                <h1>Introduction</h1>
+                <p>
+                    Moldbreaker: Rise of the Loaf is an action-packed platformer where you play as Bradley, 
+                    a breadapus. Guide him as he ascends the corrupted Bread Kingdom to defeat the infectious 
+                    “moldies” and save the food world. The adventure begins at Bradley’s home, which serves as a hub 
+                    connecting to different levels. As players progress, they’ll explore unique and whimsical locations 
+                    like the fiery Breadcano, the untamed Wild Rivers, and more. The journey intensifies with increasingly challenging 
+                    enemies, intricate platforming sections, and hazardous environments, testing Bradley’s courage and your skills!
+                </p>
+                <br>
+                <button class="button" onclick="window.open('https://store.steampowered.com/app/3374700/Moldbreaker_Rise_of_the_Loaf/')">
+                    Play Moldbreaker: Rise of the Loaf For Free
+                </button>
+                <br>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3AeKuRE1wPY?si=78Kme-vYapLYlL55" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <figcaption>Trailer of Moldbreaker: Rise of the Loaf (I did the cover art!)</figcaption>
+                <br>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0achvQw6BLg?si=_AU5T_Z72PLK8Mwx" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <figcaption>The soundtrack of Moldbreaker: Rise of the Loaf (I also did the cover art!)</figcaption>
+                <br>
+            </div>
+        </section>
+
+        <section id="My-Role">
+            <div>
+                <h1>My Role</h1>
+                <p>
+                    I love creating characters that are silly and weird. That's how Bradley came to life. I came up with him while sketching edible creatures—a mix between a loaf of bread and a platypus. The result? The "Breadapus." It didn't make much sense, but there was a certain charm in its ridiculousness.
+                </p>
+                <p>
+                    When we started brainstorming for our 3D game, we struggled to come up with truly original ideas. Then, I suggested the Breadapus concept as a foundation to build a world around. From there, the world of Moldbreaker began to take shape.
+                </p>
+                <p>
+                    After hours of brainstorming, we landed on the idea of a food-themed world under attack by food's worst enemy... MOLD. It was amazing how naturally the world of Moldbreaker came to life once we decided that Bradley would be the hero of this scrumptious world.
+                </p>
+                <p>
+                    With the game concept locked in, I knew it was time to take my role as art lead seriously. We wanted this world to feel delicious and inviting, so the art had to capture that perfectly—every texture, color, and detail needed to look good enough to eat.
+                </p>
+                <br>
+                <figure>
+                    <img src="img/Breadaplus - Concept art.png" alt="Sketches of Bradley">
+                    <br>
+                    <figcaption>Photo 1: Sketches of Bradley</figcaption>
+                </figure>
+                <p>
+                    As art lead, I was responsible for the overall art style of the game. So I set up some rules 
+                    when we were developing the style of the game.
+                </p>
+                <br>
+                <figure>
+                    <img src="img/Screenshot 2025-01-15 215703.png" alt="Styleguide of Moldbreaker">
+                    <br>
+                    <figcaption>Photo 2: The style guide of Moldbreaker</figcaption>
+                </figure>
+                <br>
+                <p>
+                    Looking back on my role as art lead, I realize just how challenging it was to handle so much responsibility. 
+                    One of the toughest parts was keeping the game's art style consistent, especially since each artist had a unique style. 
+                    Instead of seeing this as a problem, I used it as an opportunity to make the most of each artist's strengths and give them tasks
+                    based on what they were good at. Once we found our workflow, collaborating with so many talented artists became such a fun experience. 
+                    I’m incredibly proud to have led such a talented team and to have helped shape the delicious art of our game.
+                </p>
+                <figure>
+                    <img src="img/image-7.png" alt="Bradley looking at me">
+                    <br>
+                    <figcaption>Photo 3: Bradley looking at me.</figcaption>
+                </figure>
+                <br>
+            </div>
+        </section>
+
+        <section id="Art">
+            <div>
+                <h1>The Art of Moldbreaker</h1>
+                <p>
+                    I'm proud to present the artbook I made for Moldbreaker. It goes into detail about 
+                    how we created the art for Moldbreaker. I want to thank everyone who helped me work on the 
+                    art of this amazing game. This artbook is more than just a collection of our art—it's a
+                    tribute to all the hard work and passion that went into making this game a reality. I hope 
+                    it does justice to the incredible effort our team put in.
+                </p>
+                <div class="pdf-container">
+                    <canvas id="pdf-canvas"></canvas>
+                    <div class="pdf-controls">
+                        <button onclick="prevPage()">❮ Prev</button>
+                        <span id="page-info">Page 1</span>
+                        <button onclick="nextPage()">Next ❯</button>
+                    </div>
+                </div>
+                <!-- Modal Overlay -->
+                <div id="artbookModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <canvas id="modal-canvas"></canvas>
+                    <div class="modal-controls">
+                        <button onclick="prevModalPage()">❮ Prev</button>
+                        <span id="modal-page-info">Page 1</span>
+                        <button onclick="nextModalPage()">Next ❯</button>
+                    </div>
+                </div>
+                <button class="button" onclick="openModal()">View in Fullscreen</button>
+                <button class="button" onclick="window.open('https://raw.githubusercontent.com/Little-Whisp/Mono-Website-main/master/img/The%20Art%20of%20Moldbreaker_compressed.pdf', '_blank')">
+                    Download Artbook
+                </button>
+                <p>
+                    We used Miro to document our progress and also as a central workspace, where everyone could see
+                    what all the artists were working on. It's really fun to look back and see all the ideas and concepts we came up with!
+                </p>
+                <figure>
+                    <img src="img/Screenshot 2025-05-16 171335.png" alt="Miro Board Screenshot">
+                    <br>
+                    <figcaption>Click here to check out the Miro board!</figcaption>
+                </figure>
+                <button class="button" onclick="window.open('https://miro.com/welcomeonboard/S2g5cmR5N1BQQWJKQzRoR1FpczFTZzZIOExkdHFDaUtTZkxCU3FsTm1xK0FRSmZmVnR5SGUxeFQ1dmZOOGhZQk9BZ1lROGE1Q0JJRVdHSFhrR0VkSmJDd21WNUZBb1FQWEQzK2QzQ3NmWjB0ZVorYmtDVFBmUVJ5dmxPYW9ncEhyVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=613051845444', '_blank')">
+                    Open Miro Board
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        let pdfDoc = null;
+        let currentPage = 1;
+        const canvas = document.getElementById("pdf-canvas");
+        const ctx = canvas.getContext("2d");
+        const url = "https://raw.githubusercontent.com/Little-Whisp/Mono-Website-main/master/img/The%20Art%20of%20Moldbreaker_compressed.pdf";
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js";
+
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            pdfDoc = pdf;
+            renderPage(currentPage);
+        }).catch(error => {
+            console.error("Error loading PDF:", error);
+            alert("Failed to load the Artbook. Please check the file link or try again later.");
+        });
+
+        function renderPage(pageNumber) {
+            pdfDoc.getPage(pageNumber).then(page => {
+                const viewport = page.getViewport({ scale: 1.5 });
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport,
+                };
+                page.render(renderContext);
+                document.getElementById("page-info").textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+            });
+        }
+
+        function nextPage() {
+            if (currentPage < pdfDoc.numPages) {
+                currentPage++;
+                renderPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage(currentPage);
+            }
+        }
+
+        let modalCurrentPage = 1;
+
+        function openModal() {
+            const modal = document.getElementById("artbookModal");
+            const modalCanvas = document.getElementById("modal-canvas");
+            const ctx = modalCanvas.getContext("2d");
+            if (pdfDoc) {
+                modalCurrentPage = currentPage; // Sync with current page
+                renderModalPage(modalCurrentPage);
+            }
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("artbookModal");
+            modal.style.display = "none";
+        }
+
+        function renderModalPage(pageNumber) {
+            const modalCanvas = document.getElementById("modal-canvas");
+            const ctx = modalCanvas.getContext("2d");
+            pdfDoc.getPage(pageNumber).then(page => {
+                const viewport = page.getViewport({ scale: 2 });
+                modalCanvas.width = viewport.width;
+                modalCanvas.height = viewport.height;
+                page.render({ canvasContext: ctx, viewport: viewport });
+                document.getElementById("modal-page-info").textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+            });
+        }
+
+        function nextModalPage() {
+            if (modalCurrentPage < pdfDoc.numPages) {
+                modalCurrentPage++;
+                renderModalPage(modalCurrentPage);
+            }
+        }
+
+        function prevModalPage() {
+            if (modalCurrentPage > 1) {
+                modalCurrentPage--;
+                renderModalPage(modalCurrentPage);
+            }
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("artbookModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // Scroll to top button functionality
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        window.onscroll = function () {
+            scrollFunction();
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>

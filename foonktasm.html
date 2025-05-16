@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Img/1.png" />
+    <title>Silviani Martis</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style-foonktasm.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div><a href="#Introduction">Introduction</a></div>
+        <div><a href="#My-Role">My Role</a></div>
+        <div><a href="#Art">The Art of Foonktasm</a></div>
+    </nav>
+
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+        <div>
+            <img src="img/1.png" alt="Arrow icon">          
+            <span>Back to top</span>
+        </div>
+    </button>
+
+    <header></header>
+
+    <main>
+
+        <div class="button-container">
+            <button class="button" onclick="window.location.href='games.html'">Go back</button>
+        </div>
+
+        <!-- Introduction Section -->
+        <section id="Introduction">
+            <div>
+                <h1>Introduction</h1>
+                <p>
+                   Foonktasm is a mobile rhythm game where you play as Noon, a curious and nosy creature. 
+                   He ventures into his neighbors' haunted houses to help clear out the pesky dark creatures lurking inside. 
+                   Armed with his trusty flashlight, Noon scares away the spooky creatures—who, strangely enough, 
+                   approach him to the beat of a rhythm!
+                </p>
+
+                <button class="button" onclick="window.open('https://play.google.com/store/apps/details?id=com.luxstudio.foonktasm&hl=en')">
+                    Play Foonktasm For Free
+                </button>
+                <br>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fA1fwowXmEk" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br>
+
+                <figcaption>The trailer of Foonktasm (I did the cover art hihi)</figcaption>
+            </div>
+        </section>
+
+        <!-- My Role Section -->
+        <section id="My-Role">
+            <div>
+                <h1>My Role</h1>
+                <p>
+                    Foonktasm was the first real game I worked on. It was incredibly exciting, my dreams of working on a game were finally coming true! 
+                    We had to make a mobile game in just six weeks. This came with many challenges. 
+                    We got to choose our own roles, and I chose to be an artist. I wanted to learn about the workflow of creating game art.
+                </p>
+
+                <figure>
+                    <img src="img/Character sheet.png">
+                    <br>
+                    <figcaption>Photo 1: Sketches of Noon</figcaption>
+                    <br>
+                </figure>
+               
+                <p>
+                   We chose to use pixel art to speed up the art creation process. This meant we also had to animate the character in pixel art. 
+                   I had never done this before, so I had to learn how to do it quickly. I used Aseprite to animate Noon, which was so much fun!
+                </p>
+
+                <figure>
+                    <img src="img/Sprite-Noon-Sheet(Blicking).png">
+                    <br>
+                    <figcaption>Photo 2: Noon animation sprite sheet</figcaption>
+                    <br>
+                </figure>
+            </div>
+        </section>
+
+       <!-- Artbook Section -->
+<section id="Art">
+    <div>
+        <h1>The Art of Foonktasm</h1>
+        <p>
+            I'm proud to present the artbook I made for Foonktasm. It goes into detail about how we 
+            created the art for Foonktasm. It was really fun to collaborate with Niki Pangelova, 
+            who I also had the pleasure of working with on Moldbreaker. She's one of the most talented artists I've 
+            ever met, and I'm proud to have worked alongside such an amazing artist.
+        </p>
+
+        <div class="pdf-container">
+            <canvas id="pdf-canvas"></canvas>
+            <div class="pdf-controls">
+                <button onclick="prevPage()">❮ Prev</button>
+                <span id="page-info">Page 1</span>
+                <button onclick="nextPage()">Next ❯</button>
+            </div>
+        </div>
+
+     <!-- Modal Overlay -->
+<div id="artbookModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <canvas id="modal-canvas"></canvas>
+    <div class="modal-controls">
+        <button onclick="prevModalPage()">❮ Prev</button>
+        <span id="modal-page-info">Page 1</span>
+        <button onclick="nextModalPage()">Next ❯</button>
+    </div>
+</div>
+
+
+        <button class="button" onclick="openModal()">View in Fullscreen</button>
+        <button class="button" onclick="window.open('https://raw.githubusercontent.com/Little-Whisp/Mono-Website-main/master/img/Artbook(foonktasm).pdf', '_blank')">
+            Download Artbook
+        </button>
+
+    </div>
+</section>
+
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+    let pdfDoc = null;
+    let currentPage = 1;
+    const canvas = document.getElementById("pdf-canvas");
+    const ctx = canvas.getContext("2d");
+
+    const url = "https://raw.githubusercontent.com/Little-Whisp/Mono-Website-main/master/img/Artbook(foonktasm).pdf";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js";
+
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+        pdfDoc = pdf;
+        renderPage(currentPage);
+    }).catch(error => {
+        console.error("Error loading PDF:", error);
+        alert("Failed to load the Artbook. Please check the file link or try again later.");
+    });
+
+    function renderPage(pageNumber) {
+        pdfDoc.getPage(pageNumber).then(page => {
+            const viewport = page.getViewport({ scale: 1.5 });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            page.render({ canvasContext: ctx, viewport: viewport });
+            document.getElementById("page-info").textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+        });
+    }
+
+    function nextPage() {
+        if (currentPage < pdfDoc.numPages) {
+            currentPage++;
+            renderPage(currentPage);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage(currentPage);
+        }
+    }
+
+    let modalCurrentPage = 1;
+
+function openModal() {
+    const modal = document.getElementById("artbookModal");
+    const modalCanvas = document.getElementById("modal-canvas");
+    const ctx = modalCanvas.getContext("2d");
+
+    if (pdfDoc) {
+        modalCurrentPage = currentPage; // Sync with current page
+        renderModalPage(modalCurrentPage);
+    }
+
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.getElementById("artbookModal");
+    modal.style.display = "none";
+}
+
+function renderModalPage(pageNumber) {
+    const modalCanvas = document.getElementById("modal-canvas");
+    const ctx = modalCanvas.getContext("2d");
+
+    pdfDoc.getPage(pageNumber).then(page => {
+        const viewport = page.getViewport({ scale: 2 });
+        modalCanvas.width = viewport.width;
+        modalCanvas.height = viewport.height;
+        page.render({ canvasContext: ctx, viewport: viewport });
+        document.getElementById("modal-page-info").textContent = `Page ${pageNumber} of ${pdfDoc.numPages}`;
+    });
+}
+
+function nextModalPage() {
+    if (modalCurrentPage < pdfDoc.numPages) {
+        modalCurrentPage++;
+        renderModalPage(modalCurrentPage);
+    }
+}
+
+function prevModalPage() {
+    if (modalCurrentPage > 1) {
+        modalCurrentPage--;
+        renderModalPage(modalCurrentPage);
+    }
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("artbookModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+
+
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+window.onscroll = function () {
+    scrollFunction();
+};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+    </script>
+
+</body>
+
+</html>

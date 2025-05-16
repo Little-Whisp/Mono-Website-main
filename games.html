@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/1.png" />
+  <title>Silviani Martis</title>
+  <link rel="stylesheet" type="text/css" href="./styles/style-games.css" />
+</head>
+
+
+<body>
+
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+    <div>
+      <img src="img/1.png" alt="Arrow icon">
+      <span>Back to top</span>
+    </div>
+  </button>
+  
+
+  <header>Game Design</header>
+
+  <div class="main-buttons">
+    <div class="back-button-container">
+      <button class="button" onclick="window.location.href='index.html'">Go back</button>
+    </div>
+    <div class="button-container">
+      <a href="moldbreaker.html" class="button">Moldbreaker</a>
+      <a href="foonktasm.html" class="button">Foonktasm</a>
+    </div>
+  </div>
+
+  <main>
+  
+    <section id="Who-am-I">
+
+      <div>
+        <h1>
+          Games I've worked on
+        </h1>
+
+        <p>
+          During my study, I had the opportunity to work on two game projects. A 2D game, Foonktasm, and A 3D game, Moldbreaker: Rise of the Loaf, 
+          where I primarily focused on art. In fact, for Moldbreaker, I had the role of Art Director, 
+          giving me the chance to lead and shape the game's visual style. Of course, I couldn’t have made 
+          these games without my amazing classmates, who helped me make these games possible. This experience allowed 
+          me to create two incredible games—something I’ve dreamed of since I was a child. A huge thank you to Lux Studio and Silly Business 
+          for making these projects possible! Above, you can check out both games if you’d like to learn more about them.
+        </p>
+
+        <p>
+          <img src="img/IMG_0380.jpg">
+        </p>
+        <figcaption>Silly Business </figcaption>
+
+
+      </div>
+
+    </section>
+
+    <footer>
+    </footer>
+
+    <script>
+      // Get the button
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+
+  </main>
+</body>
+
+</html>
